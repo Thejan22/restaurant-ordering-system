@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="container my-5">
-    <h2 class="text-center mb-4">My Order History</h2>
+    <h1 class="text-center mb-4">My Order History</h1>
 
     {% if orders %}
         <div class="row">
@@ -31,7 +31,7 @@
     {% else %}
         <!-- No orders message -->
         <div class="text-center py-5">
-            <h4>You haven't placed any orders yet.</h4>
+            <h3>You haven't placed any orders yet.</h3>
              <!-- Redirect to menu -->
             <a href="/menu/" class="btn btn-primary">Browse Menu</a>
         </div>
