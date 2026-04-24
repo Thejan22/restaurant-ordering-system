@@ -1,10 +1,10 @@
-Restaurant Ordering System
+# Restaurant Ordering System
 A Django-based web application that allows restaurants to list food items and customers to browse menus, add items to their cart, and place orders. Built with Django 6.0.4 and Bootstrap 5, this project demonstrates end-to-end functionality including authentication, cart management, and order history.
 
-Features
-User Authentication
+## Features
+- User Authentication
 
-Register, login, and logout
+- Register, login, and logout
 
 Dynamic navbar with personalized greetings
 
@@ -34,13 +34,13 @@ Orders saved to database with status tracking
 
 Order history view for customers
 
-Admin Panel
+## Admin Panel
 
 Manage categories, food items, and orders
 
 Search, filter, and update order statuses
 
-UI & Design
+## UI & Design
 
 Responsive Bootstrap 5 layout
 
@@ -48,7 +48,7 @@ Red theme with consistent styling
 
 Success/error notifications using Django messages framework
 
-Tech Stack
+## Tech Stack
 Backend: Django 6.0.4
 
 Frontend: Bootstrap 5, CSS
