@@ -48,6 +48,15 @@ A Django-based web application that allows restaurants to list food items and cu
 
 - Success/error notifications using Django messages framework
 
+## How to Run the App
+- Start the development server
+  (python manage.py runserver)
+- Open the app in your browser
+  http://127.0.0.1:8000/
+- Login to the admin panel
+  http://127.0.0.1:8000/admin/
+
+
 ## Tech Stack
 - Backend: Django 6.0.4
 
