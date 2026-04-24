@@ -6,6 +6,7 @@ import sys
 
 def main():
     """Run administrative tasks."""
+    # Set the default Django settings module so the project knows which configuration to use
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
     try:
         from django.core.management import execute_from_command_line
@@ -18,6 +19,6 @@ def main():
      # Execute command (e.g., runserver)
     execute_from_command_line(sys.argv)
 
-# Run only if executed directly
+# Entry point: only run the main function when this script is executed directly
 if __name__ == '__main__':
     main()
