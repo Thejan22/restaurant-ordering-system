@@ -61,7 +61,8 @@ A Django-based web application that allows restaurants to list food items and cu
 
 ### Home Page
 ![Home Page](screenshots/home.png)
-
+### Login Page
+![Login Page](screenshots/Create_account.png)
 ### Cart Page
 ![Cart Page](screenshots/cart.png)
 
