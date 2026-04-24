@@ -57,6 +57,11 @@ A Django-based web application that allows restaurants to list food items and cu
 
 - Other Packages: Pillow (image handling), django-bootstrap5
 
+## Prerequisities
+- Python
+- Django
+- Bootstrap
+
 ## Screenshots
 
 ### Home Page
