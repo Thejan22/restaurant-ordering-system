@@ -6,33 +6,33 @@ A Django-based web application that allows restaurants to list food items and cu
 
 - Register, login, and logout
 
-Dynamic navbar with personalized greetings
+- Dynamic navbar with personalized greetings
 
-Menu Management
+- Menu Management
 
-Food items with images, descriptions, prices, and categories
+- Food items with images, descriptions, prices, and categories
 
-Admin panel for adding, editing, and managing menu items
+- Admin panel for adding, editing, and managing menu items
 
-Shopping Cart
+- Shopping Cart
 
-Add items to cart
+- Add items to cart
 
-Update quantities (+/-)
+- Update quantities (+/-)
 
-Remove items
+- Remove items
 
-Clear cart option (optional enhancement)
+- Clear cart option (optional enhancement)
 
-Automatic total calculation
+- Automatic total calculation
 
-Order Processing
+- Order Processing
 
-Checkout with delivery address
+- Checkout with delivery address
 
-Orders saved to database with status tracking
+- Orders saved to database with status tracking
 
-Order history view for customers
+- Order history view for customers
 
 ## Admin Panel
 
