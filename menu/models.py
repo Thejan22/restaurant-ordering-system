@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-# Food Category (Starters, Main Course, etc.)
+# Category model defines food categories (e.g., Starters, Main Course) for organizing menu itemsclass Category(models.Model):
 class Category(models.Model):
     name = models.CharField(max_length=100, unique=True)
     description = models.TextField(blank=True)
@@ -12,7 +12,7 @@ class Category(models.Model):
     class Meta:
         verbose_name_plural = "Categories"
 
-# Food Item / Menu Item
+# FoodItem model represents individual dishes with details like price, description, and availability
 class FoodItem(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='food_items')
     name = models.CharField(max_length=200)
@@ -28,7 +28,7 @@ class FoodItem(models.Model):
     class Meta:
         ordering = ['category', 'name']
 
-# Shopping Cart
+# Cart model links directly to a user and holds all items they’ve added for ordering
 class Cart(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='cart')
     created_at = models.DateTimeField(auto_now_add=True)
@@ -40,7 +40,7 @@ class Cart(models.Model):
     def get_total_price(self):
         return sum(item.get_total_price() for item in self.items.all())
 
-# Cart Item
+# CartItem model stores each food item in the cart along with its quantity and total price calculation
 class CartItem(models.Model):
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE, related_name='items')
     food_item = models.ForeignKey(FoodItem, on_delete=models.CASCADE)
@@ -53,7 +53,7 @@ class CartItem(models.Model):
     def get_total_price(self):
         return self.food_item.price * self.quantity
 
-# Order
+# Order model tracks placed orders, including delivery address, total amount, and current status
 class Order(models.Model):
     STATUS_CHOICES = [
         ('Pending', 'Pending'),
