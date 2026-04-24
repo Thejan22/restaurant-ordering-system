@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Order History - My Restaurant{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="text-center mb-4">My Order History</h2>
+
+    {% if orders %}
+        <div class="row">
+            {% for order in orders %}
+            <div class="col-12 mb-4">
+                <div class="card">
+                    <div class="card-header bg-light">
+                        <strong>Order #{{ order.id }}</strong> 
+                        <span class="float-end">{{ order.order_date|date:"d M Y, H:i" }}</span>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Status:</strong> 
+                            <span class="badge bg-{% if order.status == 'Delivered' %}success{% elif order.status == 'Pending' %}warning{% else %}primary{% endif %}">
+                                {{ order.status }}
+                            </span>
+                        </p>
+                        <p><strong>Delivery Address:</strong> {{ order.delivery_address }}</p>
+                        <p><strong>Total Amount:</strong> Rs. {{ order.total_amount|floatformat:2 }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="text-center py-5">
+            <h4>You haven't placed any orders yet.</h4>
+            <a href="/menu/" class="btn btn-primary">Browse Menu</a>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
