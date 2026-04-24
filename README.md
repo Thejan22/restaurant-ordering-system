@@ -36,26 +36,26 @@ A Django-based web application that allows restaurants to list food items and cu
 
 ## Admin Panel
 
-Manage categories, food items, and orders
+- Manage categories, food items, and orders
 
-Search, filter, and update order statuses
+- Search, filter, and update order statuses
 
 ## UI & Design
 
-Responsive Bootstrap 5 layout
+- Responsive Bootstrap 5 layout
 
-Red theme with consistent styling
+- Red theme with consistent styling
 
-Success/error notifications using Django messages framework
+- Success/error notifications using Django messages framework
 
 ## Tech Stack
-Backend: Django 6.0.4
+- Backend: Django 6.0.4
 
-Frontend: Bootstrap 5, CSS
+- Frontend: Bootstrap 5, CSS
 
-Database: SQLite (default, can be swapped for PostgreSQL/MySQL)
+- Database: SQLite (default, can be swapped for PostgreSQL/MySQL)
 
-Other Packages: Pillow (image handling), django-bootstrap5
+- Other Packages: Pillow (image handling), django-bootstrap5
 
 ## Screenshots
 
