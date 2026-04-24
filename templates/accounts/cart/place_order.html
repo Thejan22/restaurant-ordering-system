@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}Checkout - My Restaurant{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="text-center mb-4">Checkout</h2>
+    
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Order Summary</h4>
+                    <hr>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for food_id, item in cart.items %}
+                            <tr>
+                                <td>{{ item.name }}</td>
+                                <td>{{ item.quantity }}</td>
+                                <td>Rs. {{ item.price }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <h5 class="text-end">Total: <strong>Rs. {{ total|floatformat:2 }}</strong></h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Delivery Details</h4>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label class="form-label">Delivery Address</label>
+                            <textarea name="delivery_address" class="form-control" rows="4" 
+                                      placeholder="Enter your full delivery address" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-lg w-100">
+                            Place Order
+                        </button>
+                    </form>
+                    <a href="/cart/" class="btn btn-outline-secondary w-100 mt-2">Back to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
